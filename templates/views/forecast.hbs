@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+<body>
+    {{>nav}}
+    <!-- forecast weather  -->
+    <div class="forecastDiv" style="margin-top: 10px;">
+        <div class="title" style="display: flex;">
+            <i class='bx bx-map' style="font-size: 22px; margin-right: 5px;"></i>
+            <p id="location" style="font-weight: normal;"> Narnaul , IN </p>
+        </div>
+
+        <div class="btnDiv">
+            <div class="btn" id="forecastLeftBtn" onclick="leftScroll('forecastDiv')">
+                <i class='bx bx-chevron-left'></i>
+            </div>
+            <div class="btn" id="forecastRightBtn" onclick="scrollRight('forecastDiv')">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+        <div class="cardDiv" id="forecastDiv">
+            <div class="card">
+                <div class="dateDiv">
+                    <p>Mon</p>
+                    <p>10 Aug</p>
+                </div>
+                <div class="detailsDiv">
+                    <img src="images/cloudy.png" alt="img">
+                    <div class="tempDiv">
+                        <h2>18 &deg;C</h2>
+                        <p>Partially Cloudy</p>
+                    </div>
+                </div>
+                <div class="cardDiv">
+                    <div class="card">
+                        <i class='bx bxs-thermometer'></i>
+                        <div class="detail">
+                            <p class="text">18 &deg;C</p>
+                            <p>Feels Like</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-wind'></i>
+                        <div class="detail">
+                            <p class="text">3.2 m/s</p>
+                            <p>wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-droplet'></i>
+                        <div class="detail">
+                            <p class="text">10 %</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i cl${cityname}ass='bx bx-tachometer'></i>
+                        <div class="detail">
+                            <p class="text">1004 hPa</p>
+                            <p>Air Pressure</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <p>See full details</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- forecast weather  -->
+    <div class="forecastDiv" style="margin-top: 10px;">
+        <p class="title">Full Details</p>
+        <div class="btnDiv">
+            <div class="btn" id="detailLeftBtn" onclick="leftScroll('forecastDetailsDiv')">
+                <i class='bx bx-chevron-left'></i>
+            </div>
+            <div class="btn" id="detailRightBtn" onclick="scrollRight('forecastDetailsDiv')">
+                <i class='bx bx-chevron-right'></i>
+            </div>
+        </div>
+        <div class="cardDiv" id="forecastDetailsDiv">
+            <div class="card">
+                <div class="dateDiv">
+                    <p>Mon</p>
+                    <p>10 Aug</p>
+                </div>
+                <div class="detailsDiv">
+                    <img src="images/cloudy.png" alt="img">
+                    <div class="tempDiv">
+                        <h2>18 &deg;C</h2>
+                        <p>Partially Cloudy</p>
+                    </div>
+                </div>
+                <div class="cardDiv">
+                    <div class="card">
+                        <i class='bx bxs-thermometer'></i>
+                        <div class="detail">
+                            <p class="text">18 &deg;C</p>
+                            <p>Feels Like</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-wind'></i>
+                        <div class="detail">
+                            <p class="text">3.2 m/s</p>
+                            <p>wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-droplet'></i>
+                        <div class="detail">
+                            <p class="text">10 %</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <i class='bx bx-tachometer'></i>
+                        <div class="detail">
+                            <p class="text">1004 hPa</p>
+                            <p>Air Pressure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    {{>footer}}
+</body>
+
+</html>

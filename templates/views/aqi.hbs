@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {{>header}}
+</head>
+    
+<body>
+    {{>nav}}
+    <!-- aqi div -->
+    <div class="aqiCardDiv">
+        <div class="title">
+            <i class='bx bx-map' style="font-size: 22px; margin-right: 5px;"></i>
+            <p id="location" style="font-weight: normal;"> Narnaul , IN </p>
+        </div>
+        <div class="aqiDiv">
+            <div class="title">
+                <i class='bx bx-category-alt' style="margin-right: 5px;"></i>
+                <p>Air Quality</p>
+            </div>
+            <h2 id="aqiData">Fair (2)</h2>
+            <p>Air quality is <span id="aqiContent">'Fair'</span> for outdoor activity</p>
+        </div>
+        <div class="cardDiv" id="aqiCardDiv">
+            <!-- <div class="aqiDiv">
+                <div class="title">
+                    <i class='bx bx-category-alt' style="margin-right: 5px;"></i>
+                    <p>Air Quality</p>
+                </div>
+                <h2 id="aqiData">Fair (2)</h2>
+                <p>Air quality is <span id="aqiContent">'Fair'</span> for outdoor activity</p>
+            </div> -->
+            <div class="card">
+                <div class="title">
+                    <i class='bx bx-wind' style="margin-right: 5px;"></i>
+                    <p style="margin-right: 5px;">CO</p>
+                    <p style="color: greenyellow;"> (Good)</p>
+                </div>
+                <div class="data">
+                    <p>Concentration</p>
+                    <p>360 μg/m3</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <i class='bx bx-wind' style="margin-right: 5px;"></i>
+                    <p style="margin-right: 5px;">CO</p>
+                    <p style="color: greenyellow;"> (Good)</p>
+                </div>
+                <div class="data">
+                    <p>Concentration</p>
+                    <p>360 μg/m3</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <i class='bx bx-wind' style="margin-right: 5px;"></i>
+                    <p style="margin-right: 5px;">CO</p>
+                    <p style="color: greenyellow;"> (Good)</p>
+                </div>
+                <div class="data">
+                    <p>Concentration</p>
+                    <p>360 μg/m3</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <i class='bx bx-wind' style="margin-right: 5px;"></i>
+                    <p style="margin-right: 5px;">CO</p>
+                    <p style="color: greenyellow;"> (Good)</p>
+                </div>
+                <div class="data">
+                    <p>Concentration</p>
+                    <p>360 μg/m3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {{>footer}}
+
+</body>
+
+</html>

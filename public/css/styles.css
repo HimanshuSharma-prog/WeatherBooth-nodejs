@@ -1,0 +1,582 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* font-family: sans-serif; */
+    /* font-family: 'Borel', cursive; */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+nav .nav {
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+nav .nav .logoDiv {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav .logoDiv img {
+    width: 40px;
+}
+
+nav .nav .logoDiv h2 {
+    color: #555;
+    margin-left: 10px;
+}
+
+nav .nav .linksDiv {
+    display: flex;
+}
+
+nav .nav .linksDiv .link {
+    font-size: 20px;
+    color: #555;
+    padding: 10px;
+    font-weight: 500;
+}
+
+nav .nav .linksDiv .link:hover {
+    color: #D6E8F6;
+}
+
+nav .nav .searchDiv {
+    width: 300px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ECF2FF;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+nav .nav .searchDiv i {
+    font-size: 24px;
+    color: #555;
+}
+
+nav .nav .searchDiv input {
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px;
+    color: #555;
+}
+
+.linkActive {
+    color: #D6E8F6 !important;
+}
+
+/* mob nav */
+.mobNavDiv {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.mobNavDiv .mobNav {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    background: #17171a;
+    border-radius: 20px;
+}
+
+.mobNavDiv .mobNav .mobLinks {
+    font-size: 22px;
+    color: #555;
+    padding: 0 15px;
+}
+
+.mobActive {
+    color: #D6E8F6 !important;
+}
+
+/* loaderDiv */
+.loaderDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999999999;
+    backdrop-filter: blur(3px);
+    display: none;
+}
+
+.loaderDiv img {
+    width: 350px;
+    mix-blend-mode: darken;
+}
+
+.loaderDiv .details,
+.loaderDiv .errDiv,
+.loaderDiv .msgDiv {
+    max-width: 500px;
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+    margin: 5px;
+}
+
+.loaderDiv .errDiv,
+.loaderDiv .msgDiv {
+    display: none;
+}
+
+.loaderDiv .btnDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.loaderDiv .btnDiv .btn {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    background: #D6E8F6;
+    color: #555;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* err msg div */
+
+.errMsgDiv{
+    max-width: 900px;
+    display: flex;
+    margin: 10px auto;
+    background: #f64307;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* current div */
+.currentWeatherDiv {
+    max-width: 900px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.currentWeatherDiv .locDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+    padding: 10px;
+}
+
+.currentWeatherDiv .locDiv i {
+    font-size: 20px;
+    margin-left: 5px;
+    ;
+}
+
+.currentWeatherDiv .weatherDiv {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.currentWeatherDiv .weatherDiv img {
+    width: 100px;
+}
+
+.currentWeatherDiv .weatherDiv .weather {
+    margin-left: 10px;
+    color: #555;
+}
+
+.currentWeatherDiv .weatherDiv .weather h2 {
+    font-size: 34px;
+}
+
+.currentWeatherDiv .weatherDiv .weather p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.currentWeatherDiv .detailsDiv {
+    width: 100%;
+    /* padding: 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.currentWeatherDiv .detailsDiv .cardDiv {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.currentWeatherDiv .detailsDiv .cardDiv .card {
+    width: calc(100% / 2.15);
+    margin: 5px;
+    /* background: #D6E8F6; */
+    background: #ECF2FF;
+    padding: 10px;
+    border-radius: 10px;
+    color: #555;
+}
+
+.currentWeatherDiv .detailsDiv .card i {
+    font-size: 30px;
+}
+
+.currentWeatherDiv .detailsDiv .card .text {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.currentWeatherDiv .aqiDiv {
+    margin: 5px;
+    padding: 10px;
+    background: #ECF2FF;
+    color: #555;
+    border-radius: 10px;
+}
+
+.currentWeatherDiv .detailsDiv .col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.currentWeatherDiv .aqiDiv .title {
+    display: flex;
+    font-size: 20px;
+}
+
+.currentWeatherDiv .aqiDiv .title i {
+    margin-right: 5px;
+}
+
+.currentWeatherDiv .aqiDiv h2 {
+    margin: 5px;
+}
+
+.currentWeatherDiv .col .cardDiv {
+    width: 100%;
+}
+
+/* forecast div */
+
+.forecastDiv {
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.forecastDiv .title {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.forecastDiv .cardDiv {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+.forecastDiv .cardDiv .card {
+    width: 320px;
+    margin: 5px;
+    background: #ECF2FF;
+    border-radius: 10px;
+}
+
+.forecastDiv .cardDiv .card .dateDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px 10px 0 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.forecastDiv .cardDiv .card .detailsDiv {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+
+.forecastDiv .cardDiv .card .detailsDiv img {
+    width: 100px;
+}
+
+.forecastDiv .cardDiv .card .detailsDiv .tempDiv {
+    margin-left: 10px;
+    color: #555;
+}
+
+.forecastDiv .cardDiv .card .detailsDiv .tempDiv h2 {
+    font-size: 30px;
+}
+
+.forecastDiv .cardDiv .card .detailsDiv .tempDiv p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.forecastDiv .cardDiv .card .cardDiv {
+    width: 320px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.forecastDiv .cardDiv .card .cardDiv .card {
+    width: calc(100% / 2.15);
+    margin: 5px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.forecastDiv .cardDiv .card .cardDiv .card i {
+    font-size: 32px;
+    color: #555;
+    margin-right: 5px;
+}
+
+.forecastDiv .cardDiv .card .cardDiv .card .detail p {
+    font-size: 14px;
+    color: #555;
+}
+
+.forecastDiv .cardDiv .card .cardDiv .card .detail .text {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.forecastDiv .cardDiv .card .btn {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+}
+
+.forecastDiv .btnDiv {
+    display: flex;
+}
+
+.forecastDiv .btnDiv .btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ECF2FF;
+    border-radius: 5px;
+    color: #555;
+    font-size: 24px;
+    margin: 5px;
+}
+
+/* aqi page */
+
+.aqiCardDiv {
+    max-width: 900px;
+    margin: 10px auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.aqiCardDiv .title {
+    display: flex;
+    padding: 10px;
+    color: #555;
+    font-size: 18px;
+    align-items: center;
+}
+
+.aqiCardDiv .cardDiv {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.aqiCardDiv .aqiDiv {
+    margin: 10px 5px;
+    background: #ECF2FF;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.aqiCardDiv .aqiDiv .title {
+    padding: 0;
+}
+
+.aqiCardDiv .aqiDiv h2 {
+    margin-top: 5px;
+}
+
+.aqiCardDiv .aqiDiv p {
+    color: #555;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.aqiCardDiv .cardDiv .card {
+    width: calc(100% / 2.1);
+    margin: 5px;
+    background: #ECF2FF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.aqiCardDiv .cardDiv .card .title {
+    border-bottom: 1px dashed #555;
+}
+
+.aqiCardDiv .cardDiv .card .data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+/* responsive css */
+@media(max-width:700px) {
+    .currentWeatherDiv .detailsDiv {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .currentWeatherDiv .detailsDiv .cardDiv,
+    .currentWeatherDiv .detailsDiv .col {
+        width: 100%;
+    }
+
+    .currentWeatherDiv .detailsDiv .cardDiv .card {
+        width: calc(100% / 4.5);
+    }
+
+    .currentWeatherDiv .detailsDiv .col .cardDiv {
+        width: 48%;
+    }
+
+    .currentWeatherDiv .detailsDiv .col {
+        flex-direction: row;
+    }
+
+    .currentWeatherDiv .detailsDiv .col .cardDiv .card {
+        width: calc(100% / 2.2);
+    }
+
+    nav .nav .logoDiv {
+        margin-right: 10px;
+    }
+
+    nav .nav .logoDiv h2 {
+        display: none;
+    }
+}
+
+@media(max-width:550px) {
+    .currentWeatherDiv .detailsDiv .cardDiv .card {
+        width: calc(100% / 2.15);
+    }
+
+    .currentWeatherDiv .detailsDiv .col .cardDiv {
+        width: 100%;
+    }
+
+    .currentWeatherDiv .detailsDiv .col {
+        flex-direction: column;
+    }
+
+    .currentWeatherDiv .detailsDiv .col .cardDiv .card {
+        width: calc(100% / 2.15);
+    }
+
+    nav .nav .linksDiv {
+        display: none;
+    }
+
+    .mobNavDiv {
+        display: flex;
+    }
+
+    .aqiCardDiv .cardDiv .card {
+        width: 100%;
+    }
+}

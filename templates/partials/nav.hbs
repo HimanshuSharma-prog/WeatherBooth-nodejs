@@ -1,0 +1,71 @@
+<nav>
+    <div class="nav">
+        <div class="logoDiv">
+            <img src="images/logo.png" alt="logo">
+            <h2>WeatherBooth</h2>
+        </div>
+        <div class="linksDiv">
+            <a href="/" class="link" id="homeLink">Home</a>
+            <a href="/forecast" class="link" id="forecastLink">Forecast</a>
+            <a href="/aqi" class="link" id="aqiLink">AQI</a>
+        </div>
+        <div class="searchDiv">
+            <input type="text" name="searchinput" id="searchInput" placeholder="Search city/pincode">
+            <div class="btn">
+                <i class='bx bx-search'></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- mob nav -->
+<div class="mobNavDiv">
+    <div class="mobNav">
+        <a href="/" class="mobLinks" id="mobHome">
+            <i class="fi fi-rr-home"></i>
+        </a>
+        <a href="/forecast" class="mobLinks" id="mobForecast">
+            <i class="fi fi-rr-clouds-sun"></i>
+        </a>
+        <a href="/aqi" class="mobLinks" id="mobAqi">
+            <i class="fi fi-rr-wind"></i>
+        </a>
+    </div>
+</div>
+<!-- margin -->
+<div class="div" style="height: 70px;"></div>
+{{!-- loader --}}
+<div class="loaderDiv" id="loaderDiv">
+    <img src="images/loader.svg" alt="rain">
+    <div class="details" id="loaderText">
+        <p>Please allow to location permssion to show the correct data based on your location</p>
+        <div class="btnDiv">
+            <div class="btn" onclick="getPermission()">
+                <p>Allow Permission</p>
+            </div>
+            <div class="btn" onclick="permCancel()">
+                <p>Cancel</p>
+            </div>
+        </div>
+    </div>
+    <div class="msgDiv" id="loaderMsg">
+        <p>Fetching Weather data</p>
+        <i class='bx bx-loader-circle bx-spin' style="margin-top: 5px;"></i>
+    </div>
+    <div class="errDiv" id="loaderErr">
+        <p>Location Permission Denied</p>
+        <p>Showing static default data</p>
+        <p>For getting weather details try to search</p>
+    </div>
+
+</div>
+<div class="loaderDiv" id="loadingScreen">
+    <img src="images/loader.svg" alt="rain">
+    <div class="msgDiv" id="loaderMsg" style="display: block;">
+        <p>Fetching Weather data</p>
+        <i class='bx bx-loader-circle bx-spin' style="margin-top: 5px;"></i>
+    </div>
+</div>
+<div class="errMsgDiv" id="errMsgDiv">
+    <p>The location you are trying to search is not available in API yet, Please try to search with your zip code or pin code.</p>
+</div>
